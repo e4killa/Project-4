@@ -62,13 +62,57 @@ ruffinsLibrary = function() {
         newNumber = number.toFixed(2);
 
         return (number + " has been rounded to " + newNumber);
-        return {"specificDecimal": specificDecimal}
+        return {"specificDecimal": specificDecimal};
 };
         console.log(specificDecimal(5.8));
         console.log(specificDecimal(6.2783));
         console.log(specificDecimal(122));
         
-        
+     // Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" ? "a/b/c".
+
+    var charReplace = function (string, oldChar, newChar) {
+    
+    var myString = string
+    
+    var old = new RegExp(oldChar, "g");
+
+    myString = myString.replace(old, newChar);
+
+    return myString;
+};
+  
+    console.log(charReplace("H,I,J,K,L", ",", "/"));
+  
+      // Is the string a URL? (Does it start with http: or https:?)
+
+    var urlCheck = function (string) {
+    
+    var url = string
+    
+    var check = ""
+    
+    var checkArray = []
+    
+    var end = url.indexOf(":");
+
+    checkArray[0] = "http:";
+    
+    checkArray[1] = "https:";
+
+    check = url.substring(0, end + 1);
+
+        if (check === checkArray[0]) {
+        return (url + " is a valid URL.");
+        }
+        else if (check === checkArray[1]) {
+        return (url + " is a valid URL.");
+        }
+        else {
+        return (url + " is not a valid URL.");
+        }
+};
+        console.log(urlCheck("http://www.orgsync.com/"));
+        console.log(urlCheck("github.com"));
         
         
         
