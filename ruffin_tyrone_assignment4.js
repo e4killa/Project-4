@@ -1,5 +1,6 @@
-
-
+// Tyrone Ruffin
+// SDI 1301
+// Project 4
 
 // Find the smallest value in an array that is greater than a given number
 
@@ -28,6 +29,62 @@ thatNumber = thisNumber[0];
 return (thatNumber + " is the smallest number that is greater than "  + number + ".");
 };
 console.log(lesserValue(numArray, 20));
+
+
+// Does a string follow a 123-456-7890 pattern like a phone number?
+
+var checkNum = function (phoneNumber) {
+    
+    var number = phoneNumber
+    
+    var regExpPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
+
+    
+    check = regExpPattern.test(number);
+
+        if (check) {
+            
+        return ( "true," + "," + number + " is a valid phone number.");
+    
+        } else {
+            
+        return ("false, " + number + " is not a valid phone number.");
+    
+        }
+};
+
+console.log(checkNum("(216)-848-6998"));
+console.log(checkNum("216-848-699"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
