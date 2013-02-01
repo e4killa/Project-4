@@ -115,8 +115,47 @@ ruffinsLibrary = function() {
         console.log(urlCheck("github.com"));
         
         
+        // Does a string follow an aaa@bbb.ccc pattern like an email address?
+
+    var emailCheck = function (localEmail) {
+    
+    var email = localEmail
+    
+    var checkAt = 0
+    
+    var checkDot = 0;
+
+    checkAt = email.indexOf("@");
+    
+    checkDot = email.indexOf(".");
+
+        if (checkAt != -1 && checkDot != -1) {
+            
+        if (checkAt < checkDot) {
+            
+        if (checkDot - checkAt != 1) {
+            
+        return (email + " is a valid email.");
+    
+        } else {
+            
+        return (email + " is not a valid email.");
+    
+        }
         
+        } else {
+            
+        return (email + " is not a valid email.");
+        }
         
+        } else {
+            
+        return (email + " is not a valid email.");
+        }	
+};
+
+        console.log(emailCheck("tyruff@fullsail.edu"));
+        console.log(emailCheck("tyruff@fullsailedu"));
         
         
         
